@@ -47,20 +47,32 @@ class GildedRoseTest extends TestCase
      *
      * @return void
      */
-    public function testGuiledRose(): void
+    public function testGuiledRose1(): void
     {
-        $this->item('+5 Dexterity Vest', 10, 20);
-        $this->item('Aged Brie', 2, 0);
-        $this->item('Elixir of the Mongoose', 5, 7);
-        $this->item('Sulfuras, Hand of Ragnaros', 0, 80);
-        $this->item('Sulfuras, Hand of Ragnaros', -1, 80);
+        $this->itemTest('+5 Dexterity Vest', 10, 20);
+    }
+    public function testGuiledRose2(): void
+    {
+        $this->itemTest('Aged Brie', 2, 0);
+    }
+    public function testGuiledRose3(): void
+    {
+        $this->itemTest('Elixir of the Mongoose', 5, 7);
+    }
+    public function testGuiledRose4(): void
+    {
+        $this->itemTest('Sulfuras, Hand of Ragnaros', 0, 80);
+        $this->itemTest('Sulfuras, Hand of Ragnaros', -1, 80);
+    }
+    public function testGuiledRose5(): void
+    {
         // $this->item('Backstage passes to a TAFKAL80ETC concert', 15, 20);
         // $this->item('Backstage passes to a TAFKAL80ETC concert', 10, 49);
         // $this->item('Backstage passes to a TAFKAL80ETC concert', 5, 49);
-        $this->item('Conjured Mana Cake', 3, 6);
+        $this->itemTest('Conjured Mana Cake', 3, 6);
     }
 
-    private function item($name, $sellin, $quality): void
+    private function itemTest($name, $sellin, $quality): void
     {
         $items = [new Item($name, $sellin, $quality)];
 
