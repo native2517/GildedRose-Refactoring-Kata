@@ -1,0 +1,6 @@
+name: GildedRose
+recipe: lemp
+config:
+  php: 8.1
+  webroot: deploy
+    
