@@ -30,17 +30,13 @@ final class GildedRose
     }
 
     /**
-     * Condtional function set item quality value
+     * Conditional function set item quality value
      *
      * @param Item $item
      * @return Item
      */
     private function updateItemQuality(Item $item): Item
     {
-        /**
-         * @TODO: refactor nested conditional statement, I generally look to rewrite code
-         * if more than 3 nested conditions.
-         */
         if ($item->name != 'Aged Brie' and $item->name != 'Backstage passes to a TAFKAL80ETC concert') {
             if ($item->quality > 0) {
                 if ($item->name != 'Sulfuras, Hand of Ragnaros') {
@@ -87,7 +83,7 @@ final class GildedRose
     }
 
     /**
-     * Condtional function set item sell in value
+     * Conditional function set item sell in value
      *
      * @param Item $item
      * @return Item
